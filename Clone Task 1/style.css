@@ -1,0 +1,368 @@
+@import url("https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+/* This resets margins and paddings ensuring a consistent box-sizing model*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*General body styling with a background color and default font*/
+body {
+  font-family: Josefin Sans, sans-serif;
+  font-size: 16px;
+  background-color: #e9e9e9;
+}
+
+/*Centering the layout container with margin auto and setting a max-width*/
+header,
+footer,
+main {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+main {
+  background-color: #ffffff;
+}
+
+/*Padding for main sections to create spacing*/
+header,
+.Blog-information,
+.Authors-container,
+footer {
+  padding: 50px;
+}
+
+/*Headings with custom font styles and increased letter-spacing*/
+h1,
+h2 {
+  font-family: Protest Guerrilla, serif;
+  letter-spacing: 3px;
+}
+
+/*Centering the header content*/
+header {
+  text-align: center;
+}
+
+/*Logo image styling for size*/
+header img {
+  width: 200px;
+}
+
+/*Flexbox layout for navigation bar*/
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 50px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+/*Top article heading styles*/
+.Top-article h1 {
+  padding-bottom: 25px;
+  font-size: 48px;
+}
+
+/*Styling for the emphasized part of the top heading*/
+#Top-Heading {
+  display: block;
+  font-size: 96px;
+  letter-spacing: 8px;
+}
+
+/*Styling for the top article's paragraph*/
+.Top-paragraph {
+  font-size: 20px;
+  max-width: 675px;
+  padding-bottom: 25px;
+}
+
+/*Column layout for articles with gap between columns*/
+.Article-container {
+  column-count: 3;
+  column-gap: 35px;
+}
+
+/*Styling for the headings within articles*/
+.Article-container h1 {
+  font-size: 48px;
+  padding-bottom: 25px;
+}
+
+/*Padding for paragraphs within articles*/
+.Article-container p {
+  padding-bottom: 25px;
+}
+
+/*Grid layout for album covers*/
+.Albums-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+/*Ensures images fill their containers without gaps*/
+.Albums-container div {
+  display: grid;
+  grid-gap: 0;
+}
+
+.Featured-album,
+.Album-cover {
+  width: 100%;
+}
+
+/*Flexbox layout for the author's section*/
+.Authors-container {
+  display: flex;
+  gap: 25px;
+}
+
+/*Padding adjustments for author details*/
+.Authors-details {
+  padding-left: 100px;
+}
+
+/*Author's section heading style*/
+.Authors-details h2 {
+  font-size: 48px;
+  text-align: center;
+  padding: 20px 0 30px 0;
+}
+
+/*Padding adjustments for author image*/
+.Authors-image {
+  padding-right: 100px;
+}
+
+/*Styling for author's image round and size*/
+.Authors-image img {
+  width: 200px;
+  border-radius: 50%;
+}
+
+/*Footer styling*/
+footer {
+  color: #ffffff;
+  text-align: center;
+  background-color: #14181d;
+}
+
+@media (min-width: 720px) and (max-width: 1024px) {
+  /*Adjusting padding for sections*/
+  header,
+  .Blog-information,
+  .Authors-container,
+  footer {
+    padding: 30px;
+  }
+
+  /*Reducing the logo size*/
+  header img {
+    width: 80px;
+  }
+
+  /*Adjusting the padding for navigation*/
+  nav {
+    padding-top: 30px;
+  }
+
+  /*Center-aligning the main heading*/
+  .Top-article h1 {
+    text-align: center;
+  }
+
+  /*Adjusting emphasized heading size*/
+  #Top-Heading {
+    font-size: 48px;
+    letter-spacing: 3px;
+  }
+
+  /*Reducing font size for top paragraph*/
+  .Top-paragraph {
+    font-size: 16px;
+  }
+
+  /*Articles in a single column*/
+  .Article-container {
+    column-count: 1;
+  }
+
+  /*Center-aligning article headings*/
+  .Article-container h1 {
+    text-align: center;
+  }
+
+  /*Adjusting album cover grid to two columns*/
+  .Albums-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /*Hiding the first album container featured*/
+  .Albums-container > div:first-child {
+    display: none;
+  }
+
+  /*Removing left and right padding for author details*/
+  .Authors-details {
+    padding-left: 0px;
+  }
+  .Authors-image {
+    padding-right: 0px;
+  }
+}
+
+@media (min-width: 540px) and (max-width: 720px) {
+  /*Adjusting padding for smaller screens*/
+  header,
+  .Blog-information,
+  .Authors-container,
+  footer {
+    padding: 20px;
+  }
+
+  /*Making the logo smaller*/
+  header img {
+    width: 80px;
+  }
+
+  /*Reducing navigation padding*/
+  nav {
+    padding-top: 20px;
+  }
+
+  /*Center-aligning main heading*/
+  .Top-article h1 {
+    text-align: center;
+  }
+
+  /*Adjusting emphasized heading size*/
+  #Top-Heading {
+    font-size: 48px;
+    letter-spacing: 3px;
+  }
+
+  /*Reducing font size for top paragraph*/
+  .Top-paragraph {
+    font-size: 16px;
+  }
+
+  /*Single-column articles*/
+  .Article-container {
+    column-count: 1;
+  }
+
+  /*Center-aligning article headings*/
+  .Article-container h1 {
+    text-align: center;
+  }
+
+  /*Changing album covers to a single column*/
+  .Albums-container {
+    grid-template-columns: 1fr;
+  }
+
+  /*Hiding the featured album*/
+  .Albums-container > div:first-child {
+    display: none;
+  }
+
+  /*Flex layout for the author section with column-reverse order*/
+  .Authors-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /*Removing padding for author details*/
+  .Authors-details {
+    padding-left: 0px;
+  }
+  .Authors-image {
+    padding-right: 0px;
+  }
+
+  /*Adjusting padding for author's section heading*/
+  .Authors-details h2 {
+    padding: 0 0 20px 0;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 540px) {
+  /*Further reducing padding for small devices*/
+  header,
+  .Blog-information,
+  .Authors-container,
+  footer {
+    padding: 12px;
+  }
+
+  /*Making the logo size smaller*/
+  header img {
+    width: 80px;
+  }
+
+  /*Reducing padding for navigation*/
+  nav {
+    padding-top: 12px;
+  }
+
+  /*Center-aligning top article heading*/
+  .Top-article h1 {
+    text-align: center;
+  }
+
+  /*Adjusting emphasized heading size*/
+  #Top-Heading {
+    font-size: 48px;
+    letter-spacing: 3px;
+  }
+
+  /*Single-column layout for articles*/
+  .Article-container {
+    column-count: 1;
+  }
+
+  /*Center-aligning article headings*/
+  .Article-container h1 {
+    text-align: center;
+  }
+
+  /*Displaying album covers in a single column*/
+  .Albums-container {
+    grid-template-columns: 1fr;
+  }
+
+  /*Hiding the first (featured) album container*/
+  .Albums-container > div:first-child {
+    display: none;
+  }
+
+  /*Column-reverse layout for the author section*/
+  .Authors-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /*Removing padding for author details*/
+  .Authors-details {
+    padding-left: 0px;
+  }
+  .Authors-image {
+    padding-right: 0px;
+  }
+
+  /*Adjusting padding for author's section heading*/
+  .Authors-details h2 {
+    padding: 0 0 20px 0;
+  }
+}

@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+/* Resetting universal properties for box model*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* I have used flexbox for the header as it is easy design the layout with it*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #231651;
+  padding: 16px;
+  box-shadow: 0px 12px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* backgroudn color for body*/
+body {
+  background-color: #eef36a;
+}
+
+header h1 {
+  font-size: 3em;
+  font-family: "Teko", sans-serif;
+}
+
+/*I added flex to give spacing between elements by using gap*/
+nav {
+  display: flex;
+  gap: 48px;
+}
+
+/*Styling for the links*/
+nav a {
+  text-decoration: none;
+  color: wheat;
+  font-size: 16.5px;
+  font-family: "Lato", sans-serif;
+}
+
+/*This is the general styling for all the buttons*/
+button {
+  font-size: 2em;
+  font-family: "Teko", sans-serif;
+  background-color: #eef36a;
+  padding: 16px;
+  border-radius: 16px;
+}
+
+/*Altered the padding slighlty for the header's button*/
+header button {
+  padding: 1px 16px 1px 16px;
+  border-radius: 12px;
+}
+
+/* This is main container for the movies with a grid layout and other stylings*/
+.Movies-Container {
+  max-width: 900px;
+  margin: 48px auto;
+  gap: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "Featured-mv Featured-mv"
+    "First-mv Second-mv"
+    "Third-mv Third-mv"
+    "Fourth-mv Fourth-mv"
+    "Fifth-mv Fifth-mv";
+}
+
+/*general styling for movie container*/
+.Movie {
+  background-color: #ffffff;
+  border: 1px solid #070410;
+  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.6);
+}
+
+/*Movie images for responsive width */
+.Movie img {
+  width: 100%;
+  height: auto;
+}
+
+/*THis is all the styling of Movie details section*/
+.Movie-Details {
+  display: flex;
+  text-align: left;
+  padding: 16px;
+  gap: 16px;
+  font-family: "Lato", sans-serif;
+  font-size: 1.5em;
+}
+
+/*This is all the styling of Movie details section*/
+#Featured-Movie {
+  grid-area: Featured-mv;
+  display: flex;
+  flex-direction: column;
+}
+
+/*Large image for the featured movie */
+#Featured-Movie img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: 0px 0%;
+}
+
+/*Specific styling for the feature movie button */
+#Featured-Movie button {
+  width: 75%;
+  line-height: 0.95;
+}
+
+/*Middle movies flex layout for consistent styling */
+.Middle-Movie {
+  display: flex;
+  flex-direction: column;
+}
+
+/*Movie details styling for middle movies*/
+.Middle-Movie .Movie-Details {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/*Assigning the respective grid area to the individual movie of middle movies*/
+#First-Movie {
+  grid-area: First-mv;
+}
+
+/*Assigning the respective grid area to the individual movie of middle movies*/
+#Second-Movie {
+  grid-area: Second-mv;
+}
+
+/*Assigning the respective grid are to the individual movie container*/
+.Bottom-Movie {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*Bottom movie styles with image on the left and details on the right */
+.Bottom-Movie img {
+  width: 50%;
+  height: auto;
+}
+
+/*Movie details styling for bottom movies*/
+.Bottom-Movie .Movie-Details {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/*Assigning the respective grid area to the individual movie of bottom movies*/
+#Third-Movie {
+  grid-area: Third-mv;
+}
+
+/*Assigning the respective grid area to the individual movie of bottom movies*/
+#Fourth-Movie {
+  grid-area: Fourth-mv;
+}
+/*Assigning the respective grid area to the individual movie of bottom movies*/
+#Fifth-Movie {
+  grid-area: Fifth-mv;
+}
+
+/* Media queries for tablet screens */
+@media (min-width: 720px) and (max-width: 1024px) {
+  /* Adjusting the navigation gap for smaller screens */
+  nav {
+    gap: 32px;
+  }
+
+  /* Tablet layout adjustments of movie grid */
+  .Movies-Container {
+    margin: 32px;
+    gap: 32px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "Featured-mv First-mv"
+      "Second-mv Third-mv"
+      "Fourth-mv Fifth-mv";
+  }
+
+  /*displaying th movie details as a column*/
+  #Featured-Movie .Movie-Details {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  #Featured-Movie img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Button width adjustment for featured movie */
+  #Featured-Movie button {
+    line-height: normal;
+    width: 100%;
+  }
+
+  .Middle-Movie .Movie-Details {
+    height: 100%;
+  }
+
+  /*THe laout of the bottom movie is changed to column so that the image is on top and the details below */
+  .Bottom-Movie {
+    flex-direction: column;
+  }
+
+  .Bottom-Movie .Movie-Details {
+    height: 100%;
+  }
+
+  .Bottom-Movie img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 720px) {
+  /*h1 font size reduced for mobile view*/
+  header h1 {
+    font-size: 2em;
+  }
+
+  /* Adjusting the navigation gap for smaller screens */
+  nav {
+    gap: 16px;
+  }
+
+  /*Single column movie grid for mobile view*/
+  .Movies-Container {
+    margin: 16px;
+    gap: 16px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "Featured-mv"
+      "First-mv"
+      "Second-mv"
+      "Third-mv"
+      "Fourth-mv"
+      "Fifth-mv";
+  }
+
+  #Featured-Movie .Movie-Details {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  #Featured-Movie img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Button width adjustment for featured movie on mobile */
+  #Featured-Movie button {
+    line-height: normal;
+    width: 100%;
+  }
+
+  .Middle-Movie .Movie-Details {
+    height: 100%;
+  }
+
+  .Bottom-Movie {
+    flex-direction: column;
+  }
+
+  /*THe laout of the bottom movie is changed to column so that the image is on top and the details below */
+  .Bottom-Movie .Movie-Details {
+    height: 100%;
+  }
+
+  .Bottom-Movie img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  /* Hiding the navigation links as it is  messing with the layout if the screen is less than 550px*/
+  nav a {
+    display: none;
+  }
+}

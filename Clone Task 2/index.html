@@ -1,0 +1,106 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Clone Task 2: Advanced Layout</title>
+  </head>
+  <body>
+    <header>
+      <div><h1>watch.it</h1></div>
+      <nav>
+        <a href="#">Action</a>
+        <a href="#">Comedy</a>
+        <a href="#">Romance</a>
+        <a href="#">Drama</a>
+      </nav>
+      <div><button>Search</button></div>
+    </header>
+    <main>
+      <!-- This is the main container it contains all the movie elements -->
+      <section class="Movies-Container">
+        <!-- This is the featured movie section -->
+        <div class="Movie" id="Featured-Movie">
+          <img src="./assets/hidden-figures.jpg" />
+          <div class="Movie-Details">
+            <p>
+              Three unsung heroes of NASA's space race take the spotlight in
+              this inspiring true story. Battling discrimination and defying the
+              odds, these brilliant African-American women prove that
+              intelligence, perseverance, and unity can change history and break
+              barriers.
+            </p>
+            <button>Watch Now</button>
+          </div>
+        </div>
+
+        <!-- This is the middle movie's section the movies are displayed side by side -->
+        <div class="Movie Middle-Movie" id="First-Movie">
+          <img src="./assets/who-framed-roger-rabbit.jpg" />
+          <div class="Movie-Details">
+            <p>
+              In a world where cartoons and humans coexist, a detective must
+              solve a zany, high-stakes mystery. Packed with wild humor,
+              groundbreaking animation, and noir twists, this unique film will
+              pull you into a world where anything is possible!
+            </p>
+            <button>Watch Now</button>
+          </div>
+        </div>
+
+        <div class="Movie Middle-Movie" id="Second-Movie">
+          <img src="./assets/hook.jpg" />
+          <div class="Movie-Details">
+            <p>
+              Rediscover Neverland in this thrilling twist on Peter Pan! Robin
+              Williams stars as a grown-up Peter, who must rediscover his inner
+              child to rescue his kids from the clutches of Captain Hook.
+              Adventure, magic, and nostalgia blend in this timeless family
+              classic.
+            </p>
+            <button>Watch Now</button>
+          </div>
+        </div>
+
+        <!-- This is the bottom movie's section the movies stack vertically-->
+        <div class="Movie Bottom-Movie" id="Third-Movie">
+          <img src="./assets/barbie.jpg" />
+          <div class="Movie-Details">
+            <p>
+              Step into the dazzling world of Barbie as she embarks on an
+              unexpected journey from her perfect doll life to the real world.
+              Filled with humor, heart, and empowering messages, this vibrant
+              adventure redefines what it means to dream big!
+            </p>
+            <button>Watch Now</button>
+          </div>
+        </div>
+
+        <div class="Movie Bottom-Movie" id="Fourth-Movie">
+          <img src="./assets/la-la-land.jpg" />
+          <div class="Movie-Details">
+            <p>
+              Love, dreams, and the magic of LA take center stage in this
+              musical masterpiece. Watch as two starry-eyed artists navigate
+              passion and ambition in a world where every moment feels like a
+              cinematic spectacle!
+            </p>
+            <button>Watch Now</button>
+          </div>
+        </div>
+
+        <div class="Movie Bottom-Movie" id="Fifth-Movie">
+          <img src="./assets/palm-springs.jpg" />
+          <div class="Movie-Details">
+            <p>
+              A never-ending wedding day turns into an unforgettable time-loop
+              romance! Stuck in the same day, two strangers find love, chaos,
+              and meaning in the most unexpected ways.
+            </p>
+            <button>Watch Now</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
